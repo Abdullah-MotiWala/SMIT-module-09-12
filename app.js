@@ -84,8 +84,77 @@ var myNewString2 = myNewString;
 // var numberOfPieces = grapes / numberOfPeople;
 // alert(numberOfPieces);
 
+// var grapes = 11;
+// var numberOfPeople = 2;
+// var remainder = grapes % numberOfPeople;
+// alert(remainder);
 
-var grapes = 11;
-var numberOfPeople = 2;
-var remainder = grapes % numberOfPeople;
-alert(remainder);
+var string2 = "My String";
+var number2 = 12.5;
+var bool2 = true;
+var bool3 = false;
+var null2 = null;
+var undefined2 = undefined;
+
+var obj1 = { firstName: "abc", lastName: "cde", age: 12 };
+var passed = ["zeeshan", "mansoor", "hamza", "ali"];
+var failed = ["abdullah", "haider"];
+
+// alert("You are passed")
+// var myName = prompt("Enter Your name");
+// var myNewName = "Mr " + myName
+// alert(myNewName)
+
+// var myNum = 2
+// // myNum = myNum + 1
+// // myNum += 1
+// myNum++
+// // alert(myNum++)
+// // alert(myNum)
+// alert(++myNum)
+
+// var totalCost = 1 + 3 * 4;
+// alert(totalCost)
+
+// var greetingMessage = "Hello! How are you"
+// var userName = prompt("Enter Your name")
+// var abc = "123"
+// parseInt(abc)
+
+// var greetedUser = greetingMessage + " " + userName
+// alert(greetedUser)
+// var enterValue = prompt("please enter value");
+// var secondValue = prompt("please enter second value");
+
+// for only value ==
+// for value and data type ===
+// var operator = "+"
+// if (secondValue == 0) {
+//   alert("You Enter 0");
+// } else if (secondValue == 1) {
+//   alert("You Enter 1");
+// } else {
+//   alert("You Enter Other Value");
+// }
+var minimumToContinue = 25;
+if(minimumToContinue !== 25){
+    alert("Not correct Criteria")
+}
+
+
+// var total18Plus = prompt("Enter above 18 students");
+// var totalUnder18 = prompt("Enter Under 18 students");
+
+// total18Plus = parseInt(total18Plus);
+// totalUnder18 = parseInt(totalUnder18);
+
+// var totalStudents = total18Plus + totalUnder18;
+
+// if (isNaN(total18Plus) === true) {
+//   alert("Invalid Input");
+// } else if (totalStudents >= minimumToContinue) {
+//   alert("Module should Contiue ");
+// } else {
+//   alert("Discontinue the Module");
+// }
+// alert(totalStudents);
