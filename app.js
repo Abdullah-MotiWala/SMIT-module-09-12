@@ -137,10 +137,9 @@ var failed = ["abdullah", "haider"];
 //   alert("You Enter Other Value");
 // }
 var minimumToContinue = 25;
-if(minimumToContinue !== 25){
-    alert("Not correct Criteria")
+if (minimumToContinue !== 25) {
+  alert("Not correct Criteria");
 }
-
 
 // var total18Plus = prompt("Enter above 18 students");
 // var totalUnder18 = prompt("Enter Under 18 students");
@@ -158,3 +157,152 @@ if(minimumToContinue !== 25){
 //   alert("Discontinue the Module");
 // }
 // alert(totalStudents);
+
+var myNum = 1;
+// myNum = myNum + 2;
+// myNum += 2;
+// myNum++ // POST Increment
+// ++myNum // PRE Increment
+// alert(++myNum)
+
+// var userName = prompt("Enter Your Name","Sanaullah");
+// var prefix = "Haji";
+// var user = prefix + " " + userName
+
+// alert(user)
+
+// var myName = "Abdullah";
+// var isInstructor = myName !== "Abdullah";
+// var isStudent = myName === "Abdullah";
+
+// if (isInstructor) {
+//   alert("Instructor Found");
+// } else if (isStudent) {
+//   alert("Student Found");
+// } else {
+//     alert("User Not Found")
+// }
+
+// if (isInstructor) {
+//   alert("Instructor Found");
+// } else
+//  {
+//   alert("Instructor Not Found");
+// }
+
+// var isInstructor1Present = prompt("Teacher1 agye?", "Yes");
+// var isInstructor2Present = prompt("Teacher2 agye?", "Yes");
+// var isStudentsPresent = prompt("Bache agye?", "Yes");
+
+// if (isInstructorPresent === "Yes" && isStudentsPresent === "Yes") {
+//   alert("Start Class");
+// } else {
+//   alert("Class me hi betho");
+// }
+
+// var htmlQuiz = prompt("Enter if you passed HTML", "Yes");
+// var cssQuiz = prompt("Enter if you passed CSS", "Yes");
+
+// if (htmlQuiz === "Yes" || cssQuiz === "Yes") {
+//   alert("Passed");
+// } else {
+//   alert("Failed");
+// }
+
+// if (
+//   isStudentsPresent === "Yes" &&
+//   (isInstructor1Present === "Yes" || isInstructor2Present === "Yes")
+// ) {
+//   alert("Start Class");
+// } else {
+//   alert("Hold the class");
+// }
+
+// if (isStudentsPresent === "Yes") {
+//   if (isInstructor1Present === "Yes" || isInstructor2Present === "Yes") {
+//     alert("Start Class");
+//   } else {
+//     alert("Class me hi betho");
+//   }
+// } else {
+//   alert("Hold the class");
+// }
+
+// male ka religion ka input is 1 OR 2
+// female ka religion ka input is 1 OR 2
+// agr dono true hai to okay, otherwise not okay
+
+// var religion1 = "Muslim";
+// var religion2 = "Christian";
+
+// var maleReligion = prompt("Enter Male Religion");
+// var femaleReligion = prompt("Enter Fe-Male Religion");
+
+// if (
+//   (maleReligion === religion1 || maleReligion === religion2) &&
+//   (femaleReligion === religion1 || femaleReligion === religion2)
+// ) {
+// }
+
+// var baraGhar = prompt("Ghar ka size");
+// var bariGhari = prompt("Knsi Ghari");
+
+// if (baraGhar === "Yes") {
+//   alert("alert");
+// } else {}
+
+// var isBaraGhar = baraGhar === "Yes"
+// var isBariGhari = bariGhari === "Yes"
+// if (isBaraGhar || isBariGhari) {
+//   alert("Okay");
+// } else {
+//   alert("You deserved better");
+// }
+
+// var student1 = "Ali";
+// var student2 = "Umar";
+// var student3 = "Haider";
+
+// console.log("vars:", student1, student2, student3);
+// var students = ["Ali", "Umar", "Haider"];
+// console.log("array:", students[2]);
+
+// var students = ["Faisal"]
+// var student1 = prompt("Enter Student Name");
+
+// students.push(student1)
+// console.log(students);
+
+// var students = ["Student1","Student2","Student3"]
+// students.pop()
+
+// console.log(students);
+
+// var myUsers = [];
+// var userName = prompt("User name");
+// myUsers.push("umar");
+// myUsers.push("haider");
+// myUsers.push("salman");
+
+// myUsers.pop()
+// myUsers.pop()
+// myUsers.pop()
+
+// myUsers.unshift("User 1")
+// myUsers.unshift("User 2")
+
+// myUsers.shift()
+
+// console.log(myUsers);
+
+// var students = ["ali", "umar", "fazal","new"];
+// // // students.splice(1,1)
+// // students.splice(1,1,"uzair","haidar")
+
+// // console.log(students);
+// var newArray = students.slice(0, 3);
+// console.log(newArray, students);
+
+for (var i = 0; i < 10; i++) {
+  console.log(i,i+2);
+}
