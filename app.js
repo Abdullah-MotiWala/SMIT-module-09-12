@@ -303,6 +303,118 @@ var myNum = 1;
 // var newArray = students.slice(0, 3);
 // console.log(newArray, students);
 
-for (var i = 0; i < 10; i++) {
-  console.log(i,i+2);
-}
+// for (var i = 0; i < 10; i++) {
+//   console.log(i,i+2);
+// }
+// var insName = prompt("Enter name");
+// if (insName === "Abdullah") {
+//   console.log("name matched");
+// } else if (insName === "Noman") {
+//   console.log("name matched in else");
+// } else {
+//   console.log("name not matched");
+// }
+
+// var instructor1 = "Abdullah"
+// var instructor2 = "Noman"
+
+// var instructorName = prompt("Enter Instructor Name");
+// if(instructorName === instructor1 || instructorName === instructor2){
+// console.log("Instructor Found")
+// }
+
+// var numaishClasses = ["09-12","12-03"]
+// numaishClasses.push("03-06")
+// numaishClasses.unshift("06-09")
+// var nomanClass = numaishClasses[1]
+// console.log(numaishClasses,"all classes")
+
+// // numaishClasses.pop()
+// numaishClasses.shift()
+// console.log(numaishClasses,"last class removed")
+
+// console.log("1")
+// console.log("2")
+// for (var i = 0; i < 5; i++) {
+//   console.log(i, "loop");
+// }
+// for (var i = 5; i >= 0; i--) {
+//   console.log(i, "new loop");
+// }
+
+// var newArray = ["a", "b", "c", "d", "e", "f"];
+// for (var i = newArray.length - 1; i >= 0; i--) {
+//   console.log(newArray[i]);
+// }
+// for (var i = 0; i < newArray.length; i++) {
+//   console.log(newArray[i]);
+// }
+
+// var students = ["zeeshan", "IT", "haider", "World YT"];
+// for (var i = 0; i < students.length; i++) {
+//   console.log(students[i]);
+//   if (students[i] === "IT") {
+//     continue;
+//   }
+//   console.log("console2", students[i]);
+// }
+
+// for (var i = 0; i < students.length; i++) {
+//   var student = students[i];
+//   console.log(i, student,"IT");
+//   if (student === "IT") {
+//     break;
+//   }
+//   console.log("run");
+// }
+
+// for (var i = 0; i < 5; i++) {
+//   // console.log(i);
+//   for (var j = 0; j < 3; j++) {
+//     console.log("i=", i, "j=", j);
+//   }
+//   console.log("===new iteration===");
+// }
+
+// var maritalStatus = prompt("Are You Married");
+// var casesMaritalStatus = maritalStatus.toLowerCase();
+
+// console.log(maritalStatus, casesMaritalStatus, "case");
+
+// console.log(maritalStatus.toUpperCase(), "Upper");
+// if (maritalStatus.toUpperCase() === "YES") {
+//   console.log("Mubarak");
+// } else {
+//   console.log("Earn some money");
+// }
+
+// var myName = "ubaid";
+// var firstLetter = myName.slice(0, 1);
+// var remainingLetter = myName.slice(1);
+
+// var newName = firstLetter.toUpperCase() + remainingLetter.toLowerCase();
+
+// console.log(myName, newName);
+// var studentName = "Ahsan is good student";
+// for (var i = 0; i < studentName.length; i++) {
+//   console.log(studentName[i]);
+// }
+// var iIndex = -1;
+// var variable1 = "Thihsh";
+// console.log(variable1.lastIndexOf("h"));
+// for (var i = 0; i < variable1.length; i++) {
+//   if (variable1.charAt(i) === "h") {
+//     iIndex = i;
+//     break;
+//   }
+// }
+// console.log(iIndex);
+// console.log(variable1.charAt(0), variable1[0]);
+
+var stringValue = "World War Two was biggest war ever";
+var twoIndex = stringValue.indexOf("Two"); //10
+var string1 = stringValue.slice(0, twoIndex);
+var string2 = stringValue.slice(twoIndex + 3);
+
+var newString = string1 + "2" + string2;
+console.log(newString, "===Tow  ");
