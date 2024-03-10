@@ -411,10 +411,104 @@ var myNum = 1;
 // console.log(iIndex);
 // console.log(variable1.charAt(0), variable1[0]);
 
-var stringValue = "World War Two was biggest war ever";
-var twoIndex = stringValue.indexOf("Two"); //10
-var string1 = stringValue.slice(0, twoIndex);
-var string2 = stringValue.slice(twoIndex + 3);
+// var stringValue = "World War Two was biggest war ever";
+// var twoIndex = stringValue.indexOf("Two"); //10
+// var string1 = stringValue.slice(0, twoIndex);
+// var string2 = stringValue.slice(twoIndex + 3);
 
-var newString = string1 + "2" + string2;
-console.log(newString, "===Tow  ");
+// var newString = string1 + "2" + string2;
+// console.log(newString, "===Tow  ");
+
+// var myString = "camelCase";
+// var myString2 = myString.toUpperCase();
+// var myString3 = myString2.toLowerCase()
+
+// console.log(myString, myString2,myString3);
+
+// var string1 = "camelCase";
+// var mIndex = string1.indexOf("m");
+// var zeroIndex = string1.charAt(1);
+// var stringLength = string1.length;
+// var string2 = string1.slice(5);
+// console.log(stringLength, string1, string2, zeroIndex, typeof mIndex, "2");
+
+// var flag = false;
+// var myArray = [1, 2, 3, 4, 3, 5];
+// var isShow = true
+
+// for (var i = 0; i < myArray.length; i++) {
+//   console.log(i, flag);
+//   if (myArray[i] === 3) {
+//     console.log("condition run");
+//     flag = true;
+//   }
+// }
+
+// if (flag) {
+//   alert("flag is true");
+// }
+
+// var myNumber = 2; //number
+// var myNumber2 = 2.4; //number
+// var roundedNumber = Math.round(myNumber2);
+// var flooredNumber = Math.floor(myNumber2);
+// var ceiledNumber = Math.ceil(myNumber2);
+// console.log(myNumber2, roundedNumber, flooredNumber,ceiledNumber);
+// console.log(typeof myNumber, typeof myNumber2);
+// console.log(myNumber, myNumber2);
+
+// var randomNumber = Math.random();
+// var dice = randomNumber * 6;
+// var roundedDice = Math.floor(dice) + 1;
+// console.log(roundedDice, "===random Number===");
+// var randomNumber = Math.random();
+// var rangedNumber = randomNumber * 6;
+// var newRangedNumber = Math.floor(rangedNumber);
+// var diceNumber = newRangedNumber + 1;
+// var winnerNumber = 6;
+// if (diceNumber === winnerNumber) {
+//   alert("You Won");
+// } else {
+//   alert("Try Again");
+// }
+
+// var myArray = ["bat", "lion", "kite", "scale"];
+// var randomNumber2 = Math.random() * 4;
+// var indexNumber = Math.floor(randomNumber2);
+// console.log(myArray[indexNumber]);
+
+// var stringedNumber = "200";
+// var stringedNumber2 = "400";
+// // var calculatedResult = parseInt(stringedNumber) + parseInt(stringedNumber2);
+// var calculatedResult = Number(stringedNumber) + Number(stringedNumber2);
+// // var calculatedResult2 = stringedNumber - stringedNumber2;
+// console.log(calculatedResult, "===calculate");
+// var floatNumber = "2.4";
+// console.log(parseFloat(floatNumber));
+
+// var floatNumber = 2;
+// console.log(floatNumber.toString());
+// console.log(floatNumber.toFixed(1));
+
+var a = "a";
+a = "b";
+let a = "a";
+a = "b";
+const a = "a";
+// a = "b";
+console.log(a);
+function getUserNam() {
+  let userName = prompt("Enter Your Name");
+  console.log(userName);
+}
+getUserNam();
+getUserNam();
+
+// var userName = prompt("Enter Your Name");
+// console.log(userName);
+
+// var userName = prompt("Enter Your Name");
+// console.log(userName);
+
+// var userName = prompt("Enter Your Name");
+// console.log(userName);
