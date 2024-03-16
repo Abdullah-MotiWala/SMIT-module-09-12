@@ -490,19 +490,19 @@ var myNum = 1;
 // console.log(floatNumber.toString());
 // console.log(floatNumber.toFixed(1));
 
-var a = "a";
-a = "b";
-let a = "a";
-a = "b";
-const a = "a";
+// var a = "a";
 // a = "b";
-console.log(a);
-function getUserNam() {
-  let userName = prompt("Enter Your Name");
-  console.log(userName);
-}
-getUserNam();
-getUserNam();
+// let a = "a";
+// a = "b";
+// const a = "a";
+// a = "b";
+// console.log(a);
+// function getUserNam() {
+//   let userName = prompt("Enter Your Name");
+//   console.log(userName);
+// }
+// getUserNam();
+// getUserNam();
 
 // var userName = prompt("Enter Your Name");
 // console.log(userName);
