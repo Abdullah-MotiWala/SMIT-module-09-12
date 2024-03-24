@@ -7,8 +7,53 @@
   </head>
   <body>
     HTML Run
-    <br>
+    <br />
 
-    <script src="revision.js"></script>
+    <!-- <button onClick="alert('Hello World!'); console.log('Hello World!')">
+      Click Me
+    </button> -->
+
+    <!-- <div onclick="console.log('not a button')">It is not button</div>
+
+    <div onmouseover="alert('Hover')">Hover</div> -->
+
+    <!-- <input type="text" onfocus="alert('Focussed')" /> -->
+
+    <!-- <input type="text" onblur="alert('out of focussed')" /> -->
+
+    <!-- <input type="text" onchange="console.log('run','onchange')" /> -->
+    <!-- <button onmouseup="console.log('run','mouseUp')">Click</button>
+    <button onkeydown="console.log('run','keydown')">Click</button>
+    <button onkeypress="console.log('run','kwypress')">Click</button>
+    <div onmousemove="console.log('mouse move')" style="background-color: red">
+      Mouse Move
+    </div>
+
+    <form action="" onsubmit="alert('submitted')">
+      <input type="text" />
+      <input type="submit" />
+    </form> -->
+    <form onsubmit="validation('name','fName','cnic')">
+      Name:<input type="text" id="name" /> F-Name:<input
+        type="text"
+        id="fName"
+      />
+      Cnic:<input type="text" id="cnic" />
+      <!-- <div>
+        <div></div>
+      </div> -->
+      <button>submit</button>
+    </form>
+
+    <!-- <div id="myName">My Name  <span>This is span</span></div> -->
+
+    <!-- {
+      parent : {name:"form" , att: [],children:[{element:"",textNode:true},
+      {element:"input" attr:[{key:"type",value:"text"}]}
+      {element:"div",children:[]}
+      ] }
+    } -->
+
+    <script src="event.js"></script>
   </body>
 </html>
