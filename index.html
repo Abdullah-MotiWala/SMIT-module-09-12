@@ -4,10 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     HTML Run
     <br />
+
+    <img
+      class="image"
+      id="image"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZQVDZ9nkZbVDLKgZ4l0Hl7tIjpAUIaxUgdx_PR3E4Fg&s"
+      alt=""
+      />
+      <!-- onmouseover="changeImage()"
+      onmouseleave="returnImage()" -->
+
+    <div id="modal">
+      <p>This is modal</p>
+      <button onclick="hide()">Close</button>
+    </div>
+
+    <div id="loginFrom" class="hide">Login Form</div>
+    <button onclick="showForm()">Sign In</button>
 
     <!-- <button onClick="alert('Hello World!'); console.log('Hello World!')">
       Click Me
@@ -33,17 +51,17 @@
       <input type="text" />
       <input type="submit" />
     </form> -->
-    <form onsubmit="validation('name','fName','cnic')">
+    <!-- <form onsubmit="validation('name','fName','cnic')">
       Name:<input type="text" id="name" /> F-Name:<input
         type="text"
         id="fName"
       />
       Cnic:<input type="text" id="cnic" />
-      <!-- <div>
+      <div>
         <div></div>
-      </div> -->
+      </div> 
       <button>submit</button>
-    </form>
+    </form> -->
 
     <!-- <div id="myName">My Name  <span>This is span</span></div> -->
 
@@ -53,6 +71,19 @@
       {element:"div",children:[]}
       ] }
     } -->
+
+    <!-- <div id="parent">
+      My Parent Div
+      <p>This is not parent</p>
+    </div>
+
+    <input type="text" id="name-input" value="Abc"/> -->
+
+    <!-- <p id="seeMore">abc</p>
+    <button id="seeMoreButton" onclick="showMore()">See More</button> -->
+
+    <!-- <p id="showMoreText">This is less tex....</p>
+    <button id="showMoreButton" onclick="showMore()">Show More</button> -->
 
     <script src="event.js"></script>
   </body>
