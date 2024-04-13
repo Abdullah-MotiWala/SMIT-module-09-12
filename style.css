@@ -1,0 +1,36 @@
+.hide {
+  display: none;
+}
+.show {
+  display: inline-block;
+}
+
+.team {
+  border: 1px solid black;
+  height: 6rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  transition: transform 1s;
+}
+#teams-name-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  cursor: pointer;
+}
+
+.team:hover {
+  transform: scale(1.05);
+}
+.selected {
+  border-color: gray;
+  color: gray;
+}
+
+.logged-in-wrapper {
+  float: right;
+  margin: 2rem 0.5rem;
+}
