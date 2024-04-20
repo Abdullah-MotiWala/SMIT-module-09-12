@@ -1,3 +1,5 @@
-User ki value get krni hai
-User ki value show krani hai `logged-in-user` me
-`logged-in-wrapper` ko hide krna hai
+<!-- - Login User (user se name lena hai)
+- Team selection (2) -->
+- Toss
+- Batting (10 wickets) /Bowling (10 wickets)
+- Win or Lost

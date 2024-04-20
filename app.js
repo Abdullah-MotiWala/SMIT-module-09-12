@@ -1,35 +1,59 @@
+let userName = "";
+let yourTeam = "";
+let oponTeam = "";
+let batting = false;
+let bowling = false;
+
 function getUserName() {
-  const userInput = document.getElementById("user-input");
-  const userInputValue = userInput.value;
+  const userInput = document.getElementById("user-name");
+  userName = userInput.value;
 
-  const loggedInUserSpan = document.getElementById("logged-in-user");
-  loggedInUserSpan.innerHTML = userInputValue;
+  const user = document.getElementById("user");
+  user.innerText = userName;
 
-  const loggedInWrapper = classList = ("hide")
+  const loginSection = document.getElementById("login");
+  loginSection.classList.add("hide");
 
-  console.log(loggedInUserSpan, userInputValue);
+  const teamSelection = document.getElementById("team-selection");
+  teamSelection.classList.remove("hide");
 }
 
-// const teamsSelected = [];
+function selectTeam(id) {
+  const selectedTeam = document.getElementById(id);
+  const selectedTeamName = selectedTeam.innerText;
+  if (yourTeam !== "") {
+    oponTeam = selectedTeamName;
+  } else {
+    yourTeam = selectedTeamName;
+  }
+  selectedTeam.classList.add("selected-team");
 
-// function getNameAndNext() {
-//   const userNameWrapper = document.getElementById("user-name-wrapper");
-//   const userName = document.getElementById("user-name").value;
-//   const loggedInUser = document.getElementById("logged-in");
-//   loggedInUser.innerHTML = userName;
+  const yourTeamText = document.getElementById("your-selection-text");
+  const oponTeamText = document.getElementById("opon-selection-text");
 
-//   userNameWrapper.classList = "hide";
-// }
+  yourTeamText.classList.add("hide");
+  oponTeamText.classList.remove("hide");
+}
 
-// function getSelectedTeam(id) {
-//   const teamDiv = document.getElementById(id);
-//   teamsSelected.push(teamDiv.innerText);
+function gotoNextFromTeam() {
+  const teamSection = document.getElementById("team-selection");
+  teamSection.classList.add("hide");
 
-//   teamDiv.classList.add("selected");
-//   const yourTeam = document.getElementById("your-team");
-//   yourTeam.classList = "hide";
-//   const oponentTeam = document.getElementById("oponent-team");
-//   oponentTeam.classList = "show";
+  const tossSection = document.getElementById("toss");
+  tossSection.classList.remove("hide");
+}
 
-//   console.log(teamsSelected);
-// }
+function getUserToss(selected) {
+  const tossResult = Math.floor(Math.random() * 2);
+  const isWon = tossResult === selected;
+  if (isWon) {
+    alert("Congratulations You Won The Toss");
+    batting = true;
+  } else {
+    alert("Unfortunately You Loss The Toss");
+    bowling = true;
+  }
+
+  const tossSection = document.getElementById("toss");
+  tossSection.classList.add("hide");
+}
