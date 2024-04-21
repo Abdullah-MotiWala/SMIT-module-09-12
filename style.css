@@ -25,3 +25,9 @@ div#team-selection .team {
 div#team-selection .selected-team {
   border-color: red;
 }
+
+
+.your-team {
+  text-decoration: underline;
+}
+ 
