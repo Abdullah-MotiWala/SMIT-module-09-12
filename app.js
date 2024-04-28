@@ -1,11 +1,16 @@
 let userName = "";
 let yourTeam = "";
 let oponTeam = "";
-let batting = false;
-let bowling = false;
-const scoreTypes = ["Catch Out","Bowled", 0, 1, 2, 3, 4, 5, 6];
-let wicketsRemaining = 10;
+let isBatting = null;
+const scoreTypes = ["Catch Out", "Bowled", 0, 1, 2, 3, 4, 5, 6];
+let wicketsRemaining = 2;
 let totalRuns = 0;
+let oppoSelectedTeam = null;
+let yourSelectedTeam = null;
+let targetSet = 0;
+let isGameWon = false;
+
+
 
 function getUserName() {
   const userInput = document.getElementById("user-name");
@@ -51,10 +56,10 @@ function getUserToss(selected) {
   const isWon = tossResult === selected;
   if (isWon) {
     alert("Congratulations You Won The Toss");
-    batting = true;
+    isBatting = true;
   } else {
     alert("Unfortunately You Loss The Toss");
-    bowling = true;
+    isBatting = false;
   }
 
   const tossSection = document.getElementById("toss");
@@ -62,14 +67,13 @@ function getUserToss(selected) {
 
   const matchSection = document.getElementById("match");
   matchSection.classList.remove("hide");
-  // console.log(yourTeam, oponTeam);
 
-  const yourSelectedTeam = document.getElementById("your-team");
+  yourSelectedTeam = document.getElementById("your-team");
   yourSelectedTeam.innerText = yourTeam;
 
   yourSelectedTeam.classList.add("your-team");
 
-  const oppoSelectedTeam = document.getElementById("opon-team");
+  oppoSelectedTeam = document.getElementById("opon-team");
   oppoSelectedTeam.innerText = oponTeam;
 
   if (isWon) {
@@ -79,22 +83,82 @@ function getUserToss(selected) {
   }
   const wicketsRemainingSection = document.getElementById("wicket-remains");
   wicketsRemainingSection.innerText = wicketsRemaining;
-  const totalRunsSection = document.getElementById("total-runs")
-  totalRunsSection.innerText = totalRuns
+  const totalRunsSection = document.getElementById("total-runs");
+  totalRunsSection.innerText = totalRuns;
 }
 
-
 function playBall() {
+  const matchSection = document.getElementById("match");
   const ballResultIndex = Math.floor(Math.random() * scoreTypes.length);
   alert(scoreTypes[ballResultIndex]);
+  const totalRunsSection = document.getElementById("total-runs");
+  const resultSection = document.getElementById("result-wrapper");
 
-  if(ballResultIndex===0 || ballResultIndex===1){
+  if (ballResultIndex === 0 || ballResultIndex === 1) {
     const wicketsRemainingSection = document.getElementById("wicket-remains");
     wicketsRemainingSection.innerText = --wicketsRemaining;
-  }
-  else{
-   totalRuns+=scoreTypes[ballResultIndex]
-   const totalRunsSection=document.getElementById("total-runs");
-   totalRunsSection.innerText=totalRuns
+
+    if (wicketsRemaining === 0) {
+      if (targetSet > 0) {
+        alert("Game finished");
+        if (isGameWon) {
+          resultSection.innerText =
+            "Congratulation " +
+            yourSelectedTeam.innerText.replace("*", "") +
+            " won";
+        } else {
+          resultSection.innerText =
+            "Sadly " + oppoSelectedTeam.innerText.replace("*", "") + " won";
+        }
+        matchSection.classList.add("hide");
+        resultSection.classList.remove("hide");
+        isGameWon = !isBatting;
+      } else {
+        targetSet = totalRuns + 1;
+        alert("All Out, Target Set For " + targetSet);
+        totalRuns = 0;
+        wicketsRemaining = 2;
+      }
+
+      if (isBatting) {
+        oppoSelectedTeam.innerText = oppoSelectedTeam.innerText + "*";
+        yourSelectedTeam.innerText = yourSelectedTeam.innerText.replace(
+          "*",
+          ""
+        );
+      } else {
+        yourSelectedTeam.innerText = yourSelectedTeam.innerText + "*";
+        oppoSelectedTeam.innerText = oppoSelectedTeam.innerText.replace(
+          "*",
+          ""
+        );
+      }
+      const targetWrapper = document.getElementById("target-set");
+      targetWrapper.innerText = targetSet;
+
+      totalRunsSection.innerText = totalRuns;
+      wicketsRemainingSection.innerText = wicketsRemaining;
+
+      isBatting = !isBatting;
+    }
+  } else {
+    totalRuns += scoreTypes[ballResultIndex];
+    totalRunsSection.innerText = totalRuns;
+    if (totalRuns >= targetSet && targetSet !== 0) {
+      isGameWon = isBatting;
+      alert("Game Finished");
+      matchSection.classList.add("hide");
+      resultSection.classList.remove("hide");
+
+      if (isGameWon) {
+        resultSection.innerText =
+          "Congratulation " +
+          yourSelectedTeam.innerText.replace("*", "") +
+          " won";
+      } else {
+        resultSection.innerText =
+          "Sadly " + oppoSelectedTeam.innerText.replace("*", "") + " won";
+      }
+    }
   }
 }

@@ -33,7 +33,7 @@
       <button onclick="getUserToss(0)">Heads</button>
       <button onclick="getUserToss(1)">Tails</button>
     </div>
-    <div id="match">
+    <div id="match" class="hide">
       <p>
         <span id="your-team"></span>
         <span>V/S</span>
@@ -41,8 +41,10 @@
       </p>
       <p>Wicket Remains : <span id="wicket-remains"></span></p>
       <p>Total Runs : <span id="total-runs"></span></p>
+      <p>Target : <span id="target-set"></span></p>
       <button onclick="playBall()">Play</button>
     </div>
+    <div id="result-wrapper" class="hide"></div>
     <script src="app.js"></script>
   </body>
 </html>
