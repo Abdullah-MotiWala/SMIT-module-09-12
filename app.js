@@ -5,25 +5,46 @@ let isBatting = null;
 const scoreTypes = ["Catch Out", "Bowled", 0, 1, 2, 3, 4, 5, 6];
 let wicketsRemaining = 2;
 let totalRuns = 0;
-let oppoSelectedTeam = null;
-let yourSelectedTeam = null;
+let oppoSelectedTeam = document.getElementById("opon-team");
+let yourSelectedTeam = document.getElementById("your-team");
 let targetSet = 0;
 let isGameWon = false;
+// login and team selection wrapper
+const userInput = document.getElementById("user-name");
+const user = document.getElementById("user");
+const loginSection = document.getElementById("login");
+const teamSelection = document.getElementById("team-selection");
 
+// team selection
+const yourTeamText = document.getElementById("your-selection-text");
+const oponTeamText = document.getElementById("opon-selection-text");
 
+// toss
+const tossSection = document.getElementById("toss");
+
+// match section
+const matchSection = document.getElementById("match");
+const totalRunsSection = document.getElementById("total-runs");
+
+// result section
+const resultSection = document.getElementById("result-wrapper");
+const targetWrapper = document.getElementById("target-set");
+
+const wicketsRemainingSection = document.getElementById("wicket-remains");
+
+// helpers
+function hideSection(section) {
+  section.classList.add("hide");
+}
+function showSection(section) {
+  section.classList.remove("hide");
+}
 
 function getUserName() {
-  const userInput = document.getElementById("user-name");
   userName = userInput.value;
-
-  const user = document.getElementById("user");
   user.innerText = userName;
-
-  const loginSection = document.getElementById("login");
-  loginSection.classList.add("hide");
-
-  const teamSelection = document.getElementById("team-selection");
-  teamSelection.classList.remove("hide");
+  hideSection(loginSection);
+  showSection(teamSelection);
 }
 
 function selectTeam(id) {
@@ -35,20 +56,13 @@ function selectTeam(id) {
     yourTeam = selectedTeamName;
   }
   selectedTeam.classList.add("selected-team");
-
-  const yourTeamText = document.getElementById("your-selection-text");
-  const oponTeamText = document.getElementById("opon-selection-text");
-
-  yourTeamText.classList.add("hide");
-  oponTeamText.classList.remove("hide");
+  hideSection(yourTeamText);
+  showSection(oponTeamText);
 }
 
 function gotoNextFromTeam() {
-  const teamSection = document.getElementById("team-selection");
-  teamSection.classList.add("hide");
-
-  const tossSection = document.getElementById("toss");
-  tossSection.classList.remove("hide");
+  hideSection(teamSelection);
+  showSection(tossSection);
 }
 
 function getUserToss(selected) {
@@ -62,18 +76,11 @@ function getUserToss(selected) {
     isBatting = false;
   }
 
-  const tossSection = document.getElementById("toss");
-  tossSection.classList.add("hide");
+  hideSection(tossSection);
+  showSection(matchSection);
 
-  const matchSection = document.getElementById("match");
-  matchSection.classList.remove("hide");
-
-  yourSelectedTeam = document.getElementById("your-team");
   yourSelectedTeam.innerText = yourTeam;
-
   yourSelectedTeam.classList.add("your-team");
-
-  oppoSelectedTeam = document.getElementById("opon-team");
   oppoSelectedTeam.innerText = oponTeam;
 
   if (isWon) {
@@ -81,21 +88,15 @@ function getUserToss(selected) {
   } else {
     oppoSelectedTeam.innerText = oponTeam + "*";
   }
-  const wicketsRemainingSection = document.getElementById("wicket-remains");
-  wicketsRemainingSection.innerText = wicketsRemaining;
-  const totalRunsSection = document.getElementById("total-runs");
   totalRunsSection.innerText = totalRuns;
+  wicketsRemainingSection.innerText = wicketsRemaining
 }
 
 function playBall() {
-  const matchSection = document.getElementById("match");
   const ballResultIndex = Math.floor(Math.random() * scoreTypes.length);
   alert(scoreTypes[ballResultIndex]);
-  const totalRunsSection = document.getElementById("total-runs");
-  const resultSection = document.getElementById("result-wrapper");
 
   if (ballResultIndex === 0 || ballResultIndex === 1) {
-    const wicketsRemainingSection = document.getElementById("wicket-remains");
     wicketsRemainingSection.innerText = --wicketsRemaining;
 
     if (wicketsRemaining === 0) {
@@ -110,8 +111,8 @@ function playBall() {
           resultSection.innerText =
             "Sadly " + oppoSelectedTeam.innerText.replace("*", "") + " won";
         }
-        matchSection.classList.add("hide");
-        resultSection.classList.remove("hide");
+        hideSection(matchSection);
+        showSection(resultSection);
         isGameWon = !isBatting;
       } else {
         targetSet = totalRuns + 1;
@@ -133,7 +134,6 @@ function playBall() {
           ""
         );
       }
-      const targetWrapper = document.getElementById("target-set");
       targetWrapper.innerText = targetSet;
 
       totalRunsSection.innerText = totalRuns;
@@ -147,8 +147,9 @@ function playBall() {
     if (totalRuns >= targetSet && targetSet !== 0) {
       isGameWon = isBatting;
       alert("Game Finished");
-      matchSection.classList.add("hide");
-      resultSection.classList.remove("hide");
+
+      hideSection(matchSection);
+      showSection(resultSection);
 
       if (isGameWon) {
         resultSection.innerText =
