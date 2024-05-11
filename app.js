@@ -23,8 +23,8 @@ var myNull = null; //null
 
 // DataTypes Non-Premitive Types
 // var myObj2 = { name: "abdullah", age: 27 };
-var myObject = { name: "abc", age: 27, rollNo: "24-123", isUserPassed: false }; // object
-var myArray = ["abc", 123, true, undefined, null, myNull, myUndefined]; // array
+// var myObject = { name: "abc", age: 27, rollNo: "24-123", isUserPassed: false }; // object
+// var myArray = ["abc", 123, true, undefined, null, myNull, myUndefined]; // array
 
 // STRINGS
 // (var keyword) (variable name) (assigning operator =) (variable value)
@@ -512,3 +512,30 @@ var myNum = 1;
 
 // var userName = prompt("Enter Your Name");
 // console.log(userName);
+// const document = puri html
+// const elements = document.getElementsByTagName("p");
+
+// const modalDocument = document.getElementById("modal");
+// const isIdFound = modalDocument.getAttribute("class");
+// const modalPs = modalDocument.getElementsByTagName("p");
+// const elements2 = document.querySelector(".modal");
+// console.log(isIdFound, "===elements");
+const myObject = {
+  name: "Abdullah",
+  age: 22,
+  nationality: "Pakistani",
+  sayHello: function () {
+    alert("Hello World");
+  },
+  increaseAge: function () {
+    myObject.age++;
+  },
+};
+// const surname = myObject.hasOwnProperty("surname");
+// myObject.gender = "male";
+// myObject.age = 25;
+// myObject.sayHello();
+myObject.increaseAge();
+myObject.increaseAge();
+
+// delete myObject.name;
