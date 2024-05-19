@@ -538,4 +538,67 @@ const myObject = {
 myObject.increaseAge();
 myObject.increaseAge();
 
-// delete myObject.name;
+// // delete myObject.name;
+// const dob = "11-08-2002";
+
+// const dobDate = new Date(dob);
+// const currentDate = new Date();
+
+// const age = currentDate.getYear() - dobDate.getYear();
+// console.log(age                                    , currentDate.getYear());
+// const userDetails = {
+//   name: "Abdullah",
+//   gender: "male",
+//   dob: "08-11-2002",
+
+//   getAge: function () {
+//     const currentDate = new Date();
+//     const dobDate = new Date(userDetails.dob);
+
+//     const age = currentDate.getFullYear() - dobDate.getFullYear();
+//     console.log("Your age is:",age);
+//   },
+// };
+
+// userDetails.getAge();
+
+// const smitStudent = {
+//   name: "A Samad",
+//   rollNo: 182947,
+//   dob: "12-04-2006",
+//   gender: "m",
+//   cnic: "42301-7222588-6",
+//   getDOB:function(){
+//     console.log(this.dob)
+//   }
+// };
+
+// smitStudent.getDOB()
+// function Student(name, rollNo, dob, gender, cnic) {
+//   this.fname = name;
+//   this.id = rollNo;
+//   this.dateOfBirth = dob;
+//   this.sex = gender;
+//   this.identity = cnic;
+// }
+// Student.prototype.muzammil = function () {
+//   console.log("Hello " + this.fname);
+// };
+// Student.prototype.nationality = "Pakistani";
+// const student1 = new Student(
+//   "Harisuddin",
+//   234293,
+//   "21-01-2009",
+//   "m",
+//   "42031-755588-5"
+// );
+
+// const student2 = new Student(
+//   "moiz",
+//   234294,
+//   "21-01-2001",
+//   "m",
+//   "42031-755588-4"
+// );
+// console.log(student1, student2, student1.nationality);
+// student1.muzammil(), student2.muzammil();
